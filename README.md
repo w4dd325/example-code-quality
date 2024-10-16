@@ -136,7 +136,8 @@ Here’s an example configuration:
 }
 ```
 
-> [!NOTE] **Configuration Options Explained**  
+> [!NOTE] 
+> **Configuration Options Explained**  
 > 
 > **semi: true**
 This option enforces the use of semicolons at the end of statements. By including semicolons, we reduce the chances of issues arising from JavaScript's automatic semicolon insertion.

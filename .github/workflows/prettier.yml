@@ -2,14 +2,14 @@ name: Prettier
 
 on:
   pull_request:
-    branches: [main]
+    types: [opened, synchronize, reopened]
 
 jobs:
   prettier-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4.2.1
 
       - name: Install dependencies
         run: |

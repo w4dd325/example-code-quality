@@ -1,11 +1,14 @@
 name: Lint
 
 on:
-  pull_request:
-    branches: [main]
+  workflow_run:
+    workflows: ["Prettier Check"]  # Name of the Prettier workflow
+    types:
+      - completed  # Trigger this workflow when the Prettier Check is completed
 
 jobs:
   lint-check:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}  # Only run if Prettier Check was successful
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

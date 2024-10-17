@@ -2,7 +2,7 @@ name: Lint
 
 on:
   workflow_run:
-    workflows: ["Prettier Check"]  # Name of the Prettier workflow
+    workflows: ["Prettier"]  # Name of the Prettier workflow
     types:
       - completed  # Trigger this workflow when the Prettier Check is completed
 
